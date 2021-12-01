@@ -34,7 +34,7 @@ router.register(r'stocks', StockViewSet)
 urlpatterns = [
     path(r'', include(router.urls)),
     #path(r'portfolio/profit/?<start_date>/?<end_date>/',include(router.urls)),
-    # path(r'port/', PortfolioViewSet)
+    path(r'^portfolio/profit/(?P<start_date>\d{4}-\d{2}-\d{2})/(?P<end_date>\d{4}-\d{2}-\d{2})/$', PortfolioViewSet.profit),
     
 ]
 
